@@ -1,0 +1,9 @@
+node_modules/
+.env
+!template.env
+
+
+# uploads / media generada por usuarios (NO subir a GitHub)
+public/profileImages/
+public/coverImages/
+public/tweetMedia/
