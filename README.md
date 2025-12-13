@@ -21,8 +21,7 @@ comentarios, retweets, perfiles de usuario y feed dinámico.
 - Cambio de contraseña
 
 
-
---
+---
 
 ## 🛠️ Tecnologías principales
 
