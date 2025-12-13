@@ -6,8 +6,23 @@ demostrar habilidades reales en frontend y backend.
 Incluye autenticación, publicación de tweets con texto e imagen, likes,
 comentarios, retweets, perfiles de usuario y feed dinámico.
 
-
 ---
+
+## 🚀 Funcionalidades principales
+
+- Registro e inicio de sesión con autenticación JWT
+- Creación de tweets con texto e imagen
+- Likes, comentarios y retweets
+- Feed dinámico de tweets
+- Perfil de usuario editable:
+  - datos básicos
+  - imagen de perfil
+  - imagen de portada
+- Cambio de contraseña
+
+
+
+--
 
 ## 🛠️ Tecnologías principales
 
@@ -101,7 +116,6 @@ VITE_BACKEND=http://localhost:7000/api/v1
 
 ---
 
-## 🚀 Funcionalidades principales
 
 ### ✨ Funcionalidades implementadas
 
