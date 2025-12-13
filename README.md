@@ -1,8 +1,11 @@
 # XClone – Twitter/X Clone (Fullstack)
 
-XClone es una aplicación web fullstack inspirada en Twitter/X.  
-Permite registrarse, iniciar sesión y publicar tweets con texto e imagen, además de interactuar mediante likes, comentarios y retweets.  
-El objetivo principal es demostrar habilidades fullstack con React, Node.js, Express y MySQL.
+XClone es una aplicación web fullstack inspirada en Twitter/X, desarrollada para
+demostrar habilidades reales en frontend y backend.
+
+Incluye autenticación, publicación de tweets con texto e imagen, likes,
+comentarios, retweets, perfiles de usuario y feed dinámico.
+
 
 ---
 
