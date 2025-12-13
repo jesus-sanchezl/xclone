@@ -24,8 +24,8 @@ comentarios, retweets, perfiles de usuario y feed dinámico.
 
 ## 📸 Capturas
 
-![Feed](docs/screenshots/home.jpg)
-![Perfil de usuario](docs/screenshots/profile.jpg)
+![Feed principal](https://raw.githubusercontent.com/jesus-sanchezl/xclone/main/docs/screenshots/xclone-home.jpg)
+![Perfil de usuario](https://raw.githubusercontent.com/jesus-sanchezl/xclone/main/docs/screenshots/xclone-profile.jpg)
 ![Crear tweet](docs/screenshots/new-tweet.png)
 
 ---
