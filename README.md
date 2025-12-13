@@ -20,6 +20,13 @@ comentarios, retweets, perfiles de usuario y feed dinámico.
   - imagen de portada
 - Cambio de contraseña
 
+---
+
+## 📸 Capturas
+
+![Feed](docs/screenshots/feed.png)
+![Perfil de usuario](docs/screenshots/profile.png)
+![Crear tweet](docs/screenshots/new-tweet.png)
 
 ---
 
