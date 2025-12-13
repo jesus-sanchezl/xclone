@@ -24,8 +24,8 @@ comentarios, retweets, perfiles de usuario y feed dinámico.
 
 ## 📸 Capturas
 
-![Feed](docs/screenshots/feed.png)
-![Perfil de usuario](docs/screenshots/profile.png)
+![Feed](docs/screenshots/home.jpg)
+![Perfil de usuario](docs/screenshots/profile.jpg)
 ![Crear tweet](docs/screenshots/new-tweet.png)
 
 ---
