@@ -5,6 +5,7 @@ import {
     Avatar,
     Button,
     IconButton,
+    Link,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
@@ -255,56 +256,59 @@ export const RightSidebar = () => {
                     fontSize: "12px",
                     display: "flex",
                     flexWrap: "wrap",
-                    gap: "4px",
+                    gap: "6px",
                     lineHeight: 1.5,
                 }}
             >
-                <Box
-                    component="span"
-                    sx={{
-                        cursor: "pointer",
-                        "&:hover": { textDecoration: "underline" },
-                    }}
+                <Link
+                    href="https://jesus-sanchezl.github.io/Porfolio-Jesus-Sanchez/"
+                    underline="hover"
+                    color="inherit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ cursor: "pointer" }}
                 >
-                    Proyecto personal
-                </Box>
-                |
-                <Box
-                    component="span"
-                    sx={{
-                        cursor: "pointer",
-                        "&:hover": { textDecoration: "underline" },
-                    }}
+                    Portfolio
+                </Link>
+
+                <Box component="span">·</Box>
+                <Link
+                    href="https://github.com/jesus-sanchezl/xclone"
+                    underline="hover"
+                    color="inherit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ cursor: "pointer" }}
                 >
-                    Portfolio de desarrollo web
-                </Box>
-                |
-                <Box
-                    component="span"
-                    sx={{
-                        cursor: "pointer",
-                        "&:hover": { textDecoration: "underline" },
-                    }}
-                    onClick={() =>
-                        window.open("https://github.com/tu-usuario", "_blank")
-                    }
+                    GitHub
+                </Link>
+
+                <Box component="span">·</Box>
+
+                <Link
+                    href="https://www.linkedin.com/in/jesus-sanchezl/"
+                    underline="hover"
+                    color="inherit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ cursor: "pointer" }}
                 >
-                    Código en GitHub
-                </Box>
-                |
-                <Box
-                    component="span"
-                    sx={{
-                        cursor: "pointer",
-                        "&:hover": { textDecoration: "underline" },
-                    }}
-                    onClick={() =>
-                        window.open("mailto:jesus-sanchezl@outlook.es")
-                    }
+                    LinkedIn
+                </Link>
+
+                <Box component="span">·</Box>
+                <Link
+                    href="mailto:jesus-sanchezl@outlook.es"
+                    underline="hover"
+                    color="inherit"
+                    sx={{ cursor: "pointer" }}
                 >
                     Contacto
+                </Link>
+
+                <Box sx={{ width: "100%", mt: 0.5 }}>
+                    © {new Date().getFullYear()} Jesús Sánchez
                 </Box>
-                |<Box>Proyecto personal · © 2025 Jesús Sánchez</Box>
             </Box>
         </Box>
     );

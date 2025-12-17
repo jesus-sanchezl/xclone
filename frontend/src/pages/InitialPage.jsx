@@ -1,7 +1,18 @@
 import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-import { Box, Button, Link, Snackbar, Stack, Typography } from "@mui/material";
+import {
+    Box,
+    Button,
+    Link,
+    Snackbar,
+    Stack,
+    Typography,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+} from "@mui/material";
 import MuiAlert from "@mui/material/Alert";
 
 import { LoginPage } from "./LoginPage";
@@ -15,6 +26,7 @@ export const InitialPage = () => {
     const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
     const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
     const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [openAbout, setOpenAbout] = useState(false);
 
     const openRegisterModal = () => {
         setIsRegisterModalOpen(true);
@@ -35,6 +47,9 @@ export const InitialPage = () => {
         if (reason === "clickaway") return;
         setSnackbarOpen(false);
     };
+
+    const handleOpenAbout = () => setOpenAbout(true);
+    const handleCloseAbout = () => setOpenAbout(false);
 
     return (
         <Box
@@ -287,11 +302,102 @@ export const InitialPage = () => {
                     justifyContent="center"
                     flexWrap="wrap"
                 >
+                    <Dialog
+                        open={openAbout}
+                        onClose={handleCloseAbout}
+                        fullWidth
+                        maxWidth="sm"
+                    >
+                        <DialogTitle sx={{ fontWeight: 700 }}>
+                            Sobre este proyecto
+                        </DialogTitle>
+
+                        <DialogContent
+                            dividers
+                            sx={{
+                                px: 3,
+                                py: 2.5,
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    fontSize: "0.9rem",
+                                    color: "#0f1419",
+                                    lineHeight: 1.6,
+                                }}
+                            >
+                                XClone es una aplicación web tipo X/Twitter
+                                desarrollada como proyecto de portfolio
+                                fullstack. Permite registro y autenticación de
+                                usuarios, publicación de tweets, likes,
+                                comentarios y gestión de perfiles.
+                            </Typography>
+
+                            <Typography
+                                sx={{
+                                    mt: 2.5,
+                                    fontSize: "0.9rem",
+                                    color: "#0f1419",
+                                    lineHeight: 1.6,
+                                }}
+                            >
+                                El frontend está construido con{" "}
+                                <strong>React (Vite) y Material UI</strong>, y
+                                el backend con{" "}
+                                <strong>Node.js, Express y MySQL</strong>,
+                                mediante una API REST y autenticación JWT.
+                            </Typography>
+
+                            <Typography
+                                sx={{
+                                    mt: 2.5,
+                                    fontSize: "0.9rem",
+                                    color: "#0f1419",
+                                    lineHeight: 1.6,
+                                }}
+                            >
+                                El objetivo del proyecto es demostrar tanto el
+                                diseño de una interfaz realista como una
+                                arquitectura backend clara y mantenible.
+                                Actualmente sirve como base para seguir
+                                incorporando nuevas funcionalidades.
+                            </Typography>
+                        </DialogContent>
+
+                        <DialogActions
+                            sx={{ px: 3, py: 2, justifyContent: "flex-end" }}
+                        >
+                            <Button
+                                onClick={handleCloseAbout}
+                                variant="text"
+                                sx={{
+                                    color: "#0f1419",
+                                    fontWeight: 600,
+                                    textTransform: "none",
+                                    "&:hover": {
+                                        backgroundColor: "rgba(15,20,25,0.08)",
+                                    },
+                                }}
+                            >
+                                Cerrar
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
+
                     <Link
-                        href="#sobre"
+                        component="button"
+                        type="button"
+                        onClick={handleOpenAbout}
                         underline="none"
                         color="text.secondary"
-                        sx={{ fontSize: "0.7rem", color: "#536471" }}
+                        sx={{
+                            fontSize: "0.7rem",
+                            color: "#536471",
+                            cursor: "pointer",
+                            background: "none",
+                            border: "none",
+                            p: 0,
+                        }}
                     >
                         Sobre este proyecto
                     </Link>
@@ -299,7 +405,7 @@ export const InitialPage = () => {
                         |
                     </Typography>
                     <Link
-                        href="https://github.com/tu-usuario"
+                        href="https://github.com/jesus-sanchezl/xclone"
                         underline="none"
                         color="text.secondary"
                         sx={{ fontSize: "0.7rem", color: "#536471" }}
@@ -312,18 +418,34 @@ export const InitialPage = () => {
                         |
                     </Typography>
                     <Link
-                        href="/cv.pdf"
+                        href="https://jesus-sanchezl.github.io/Porfolio-Jesus-Sanchez/"
                         underline="none"
                         color="text.secondary"
                         sx={{ fontSize: "0.7rem", color: "#536471" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        CV
+                        Portfolio
                     </Link>
                     <Typography variant="body2" color="text.secondary">
                         |
                     </Typography>
                     <Link
-                        href="#contacto"
+  href="https://www.linkedin.com/in/jesus-sanchezl/"
+  underline="none"
+  sx={{ fontSize: "0.7rem", color: "#536471" }}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  LinkedIn
+</Link>
+
+
+                    <Typography variant="body2" color="text.secondary">
+                        |
+                    </Typography>
+                    <Link
+                        href="mailto:jesus-sanchezl@outlook.es"
                         underline="none"
                         color="text.secondary"
                         sx={{ fontSize: "0.7rem", color: "#536471" }}
@@ -333,23 +455,13 @@ export const InitialPage = () => {
                     <Typography variant="body2" color="text.secondary">
                         |
                     </Typography>
-                    <Link
-                        href="#tecnologias"
-                        underline="none"
-                        color="text.secondary"
-                        sx={{ fontSize: "0.7rem", color: "#536471" }}
-                    >
-                        Tecnologías usadas
-                    </Link>
-                    <Typography variant="body2" color="text.secondary">
-                        |
-                    </Typography>
+                    
                     <Typography
                         variant="body2"
                         color="text.secondary"
                         sx={{ fontSize: "0.7rem", color: "#536471" }}
                     >
-                        © 2025 Jesús Sánchez
+                        © {new Date().getFullYear()} Jesús Sánchez
                     </Typography>
                 </Stack>
             </Box>
